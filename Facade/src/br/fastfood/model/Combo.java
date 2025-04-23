@@ -1,28 +1,35 @@
 package br.fastfood.model;
 
-import java.nio.BufferOverflowException;
-
 public class Combo {
-    private ItemCombo burguer;
-    private ItemCombo bebida;
-    private ItemCombo sobremesa;
-    private ItemCombo combo;
+    private final ItemCombo burger;
+    private final ItemCombo bebida;
+    private final ItemCombo sobremesa;
 
-    Combo(Burguer burguer, Bebida bebida, Sobremesa sobremesa){
-        this.burguer = burguer;
+    public Combo(ItemCombo burger, ItemCombo bebida, ItemCombo sobremesa) {
+        this.burger = burger;
         this.bebida = bebida;
         this.sobremesa = sobremesa;
     }
 
-    public Combo getCombo1(){
-        combo = new Combo(Burguer.)
+    public ItemCombo getBurger() {
+        return burger;
     }
 
-    public getCombo2(){
-
+    public ItemCombo getBebida() {
+        return bebida;
     }
 
-    public getCombo3(){
+    public ItemCombo getSobremesa() {
+        return sobremesa;
+    }
 
+    public double getPrecoTotal() {
+        return burger.getPreco() + bebida.getPreco() + sobremesa.getPreco();
+    }
+
+    public void exibirItens() {
+        System.out.println(burger.toString());
+        System.out.println(bebida.toString());
+        System.out.println(sobremesa.toString());
     }
 }

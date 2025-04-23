@@ -1,25 +1,25 @@
 package br.fastfood.model;
 
-public class Bebida implements ItemCombo {
+public class Burger implements ItemCombo {
     private final String nome;
     private final double preco;
 
-    public Bebida(String nome, double preco) {
+    public Burger(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
     }
 
     // Factory Methods
-    public static Bebida bigCaipirinha() {
-        return new Bebida("Big Caipirinha", 20.0);
+    public static Burger bigCheddar() {
+        return new Burger("Big Cheddar", 45.0);
     }
 
-    public static Bebida bigMojito() {
-        return new Bebida("Big Mojito", 24.0);
+    public static Burger bigOnion() {
+        return new Burger("Big Onion", 40.0);
     }
 
-    public static Bebida bigNegroni() {
-        return new Bebida("Big Negroni", 30.0);
+    public static Burger bigBacon() {
+        return new Burger("Big Bacon", 50.0);
     }
 
     @Override

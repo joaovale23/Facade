@@ -9,19 +9,31 @@ public class Sobremesa implements ItemCombo {
         this.preco = preco;
     }
 
-    public void bigBanoffe(){
-        Sobremesa bigBanoffe = new Sobremesa("bigBanoffe", 20);
+    // Factory Methods
+    public static Sobremesa bigBanoffe() {
+        return new Sobremesa("Big Banoffe", 20.0);
     }
 
-    public void bigGelatto(){
-        Sobremesa bigGelatto = new Sobremesa("bigGelatto", 20);
+    public static Sobremesa bigGelatto() {
+        return new Sobremesa("Big Gelatto", 20.0);
     }
 
-    public void bigBrulee(){
-        Sobremesa bigBrulee = new Sobremesa("bigBrulée", 20);
+    public static Sobremesa bigBrulee() {
+        return new Sobremesa("Big Brulée", 20.0);
     }
 
-    public String getNome()  { return nome; }
-    public double getPreco() { return preco; }
-    @Override public String toString() { return nome + " R$" + preco; }
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public double getPreco() {
+        return preco;
+    }
+
+    @Override
+    public String toString() {
+        return nome + " - R$ " + preco;
+    }
 }
