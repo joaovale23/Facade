@@ -10,20 +10,20 @@ public class ComboFacade {
     private Combo combo;
 
     public void criarCombo(int codigo) {
-        switch (codigo) {
-            case 1: // Combo Master
-                combo = new Combo(Burger.bigCheddar(), Bebida.bigCaipirinha(), Sobremesa.bigBanoffe());
-                break;
-            case 2: // Super Combo
-                combo = new Combo(Burger.bigBacon(), Bebida.bigNegroni(), Sobremesa.bigGelatto());
-                break;
-            case 3: // Super Combo
-                combo = new Combo(Burger.bigOnion(), Bebida.bigMojito(), Sobremesa.bigBrulee());
-                break;
-            default:
-                System.out.println("Opção inválida.");
-                break;
-        }
+            switch (codigo) {
+                case 1: // Combo Master
+                    combo = new Combo(Burger.bigCheddar(), Bebida.bigCaipirinha(), Sobremesa.bigBanoffe());
+                    break;
+                case 2: // Super Combo
+                    combo = new Combo(Burger.bigBacon(), Bebida.bigNegroni(), Sobremesa.bigGelatto());
+                    break;
+                case 3: // Super Combo
+                    combo = new Combo(Burger.bigOnion(), Bebida.bigMojito(), Sobremesa.bigBrulee());
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    break;
+            }
     }
 
     public void exibirItens() {

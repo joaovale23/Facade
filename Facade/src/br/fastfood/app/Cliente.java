@@ -6,7 +6,7 @@ package br.fastfood.app;
 import java.util.Scanner;
 import br.fastfood.facade.ComboFacade;
 
-public class Main {
+public class Cliente {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("=== Menu de Combos ===");
@@ -18,9 +18,13 @@ public class Main {
 
         ComboFacade facade = new ComboFacade();
         facade.criarCombo(escolha);
+        while(escolha < 1 || escolha > 3){
+            System.out.println("Escolha novamente: ");
+            escolha = in.nextInt();
+            facade.criarCombo(escolha);
+        }
         System.out.println("Itens do combo:");
         facade.exibirItens();
         System.out.printf("Total a pagar: R$ %.2f%n", facade.getPrecoTotal());
-        in.close();
     }
 }

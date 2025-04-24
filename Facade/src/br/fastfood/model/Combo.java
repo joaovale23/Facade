@@ -11,18 +11,6 @@ public class Combo {
         this.sobremesa = sobremesa;
     }
 
-    public ItemCombo getBurger() {
-        return burger;
-    }
-
-    public ItemCombo getBebida() {
-        return bebida;
-    }
-
-    public ItemCombo getSobremesa() {
-        return sobremesa;
-    }
-
     public double getPrecoTotal() {
         return burger.getPreco() + bebida.getPreco() + sobremesa.getPreco();
     }
